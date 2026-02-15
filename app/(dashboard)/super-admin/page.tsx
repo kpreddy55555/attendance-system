@@ -199,7 +199,7 @@ export default function SuperAdminDashboard() {
                     title={!sidebarOpen ? item.label : undefined}
                   >
                     <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 opacity-80 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-200`}>
-                      <SvgIcon name={item.icon} size={16} />
+                      <SvgIcon name={item.icon as any} size={16} />
                     </div>
                     {sidebarOpen && <span className="font-medium truncate">{item.label}</span>}
                   </button>
@@ -307,7 +307,7 @@ export default function SuperAdminDashboard() {
               >
                 <div className="flex items-start justify-between">
                   <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="text-white"><SvgIcon name={item.icon} size={20} /></span>
+                    <span className="text-white"><SvgIcon name={item.icon as any} size={20} /></span>
                   </div>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                     className="text-slate-300 group-hover:text-slate-500 group-hover:translate-x-1 transition-all duration-300 mt-1">
