@@ -166,7 +166,7 @@ export default function ClassConfigPage() {
   };
 
   // Get unique grades for bulk
-  const uniqueGrades = [...new Set(classes.map(c => c.grade))].sort();
+  const uniqueGrades = Array.from(new Set(classes.map(c => c.grade))).sort();
 
   const calcWorkingDays = (start: string, end: string) => {
     if (!start || !end) return '—';

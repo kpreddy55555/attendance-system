@@ -178,7 +178,7 @@ export default function DivisionComparisonPage() {
     setGenerated(true);
   };
 
-  const uniqueGrades = [...new Set(classes.map(c => c.grade))].sort();
+  const uniqueGrades = Array.from(new Set(classes.map(c => c.grade))).sort();
   const exportExcel = () => {
     const table = document.getElementById('div-comp-table');
     if (!table) return;

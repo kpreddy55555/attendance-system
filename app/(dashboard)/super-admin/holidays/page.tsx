@@ -166,7 +166,7 @@ export default function HolidaysPage() {
     : holidays;
 
   // Get unique months from holidays
-  const months = [...new Set(holidays.map(h => h.date.substring(0, 7)))].sort();
+  const months = Array.from(new Set(holidays.map(h => h.date.substring(0, 7)))).sort();
 
   const typeColors: Record<string, string> = {
     public: 'bg-red-100 text-red-800',
