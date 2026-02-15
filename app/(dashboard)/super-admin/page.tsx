@@ -137,6 +137,8 @@ export default function SuperAdminDashboard() {
     },
   ];
 
+  const allNavItems: { label: string; href: string; icon: string; color: string }[] = navSections.reduce<{ label: string; href: string; icon: string; color: string }[]>((acc, s) => [...acc, ...s.items], []);
+
   // ─── Stats Config ───
   const statCards = [
     { label: 'Total Institutions', value: stats.institutions, gradient: 'from-blue-500 to-cyan-500', bg: 'bg-blue-50', icon: 'building' },
@@ -296,7 +298,7 @@ export default function SuperAdminDashboard() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {navSections.flatMap(s => s.items).map((item, i) => (
+            {allNavItems.map((item, i) => (
               <button
                 key={i}
                 onClick={() => router.push(item.href)}
