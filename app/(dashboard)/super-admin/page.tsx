@@ -105,46 +105,46 @@ export default function SuperAdminDashboard() {
   };
 
   // ─── Navigation Sections ───
-  const navSections = [
+  const navSections: { title: string; items: { label: string; href: string; icon: string; color: string }[] }[] = [
     {
       title: 'SETUP',
       items: [
-        { label: 'Institutions', href: '/super-admin/institutions', icon: 'building' as const, color: 'from-blue-500 to-blue-600' },
-        { label: 'Academic Years', href: '/super-admin/academic-years', icon: 'calendar' as const, color: 'from-violet-500 to-violet-600' },
-        { label: 'Classes', href: '/super-admin/classes', icon: 'grid' as const, color: 'from-sky-500 to-sky-600' },
-        { label: 'Class Configuration', href: '/super-admin/class-config', icon: 'settings' as const, color: 'from-slate-500 to-slate-600' },
-        { label: 'Subjects', href: '/super-admin/subjects', icon: 'book' as const, color: 'from-amber-500 to-amber-600' },
-        { label: 'Periods', href: '/super-admin/periods', icon: 'clock' as const, color: 'from-cyan-500 to-cyan-600' },
+        { label: 'Institutions', href: '/super-admin/institutions', icon: 'building', color: 'from-blue-500 to-blue-600' },
+        { label: 'Academic Years', href: '/super-admin/academic-years', icon: 'calendar', color: 'from-violet-500 to-violet-600' },
+        { label: 'Classes', href: '/super-admin/classes', icon: 'grid', color: 'from-sky-500 to-sky-600' },
+        { label: 'Class Configuration', href: '/super-admin/class-config', icon: 'settings', color: 'from-slate-500 to-slate-600' },
+        { label: 'Subjects', href: '/super-admin/subjects', icon: 'book', color: 'from-amber-500 to-amber-600' },
+        { label: 'Periods', href: '/super-admin/periods', icon: 'clock', color: 'from-cyan-500 to-cyan-600' },
       ]
     },
     {
       title: 'PEOPLE',
       items: [
-        { label: 'Students', href: '/super-admin/students', icon: 'graduationCap' as const, color: 'from-emerald-500 to-emerald-600' },
-        { label: 'Faculty', href: '/super-admin/faculty', icon: 'users' as const, color: 'from-purple-500 to-purple-600' },
-        { label: 'Class Teachers', href: '/super-admin/class-teachers', icon: 'userCheck' as const, color: 'from-indigo-500 to-indigo-600' },
-        { label: 'Faculty Assignment', href: '/super-admin/faculty-assignment', icon: 'link' as const, color: 'from-pink-500 to-pink-600' },
-        { label: 'Student Enrollment', href: '/super-admin/student-enrollment', icon: 'clipboardCheck' as const, color: 'from-teal-500 to-teal-600' },
+        { label: 'Students', href: '/super-admin/students', icon: 'graduationCap', color: 'from-emerald-500 to-emerald-600' },
+        { label: 'Faculty', href: '/super-admin/faculty', icon: 'users', color: 'from-purple-500 to-purple-600' },
+        { label: 'Class Teachers', href: '/super-admin/class-teachers', icon: 'userCheck', color: 'from-indigo-500 to-indigo-600' },
+        { label: 'Faculty Assignment', href: '/super-admin/faculty-assignment', icon: 'link', color: 'from-pink-500 to-pink-600' },
+        { label: 'Student Enrollment', href: '/super-admin/student-enrollment', icon: 'clipboardCheck', color: 'from-teal-500 to-teal-600' },
       ]
     },
     {
       title: 'OPERATIONS',
       items: [
-        { label: 'Mark Attendance', href: '/faculty/attendance', icon: 'pen' as const, color: 'from-orange-500 to-orange-600' },
-        { label: 'Holidays', href: '/super-admin/holidays', icon: 'calendarX' as const, color: 'from-red-500 to-red-600' },
-        { label: 'Reports', href: '/super-admin/reports', icon: 'barChart' as const, color: 'from-emerald-500 to-green-600' },
+        { label: 'Mark Attendance', href: '/faculty/attendance', icon: 'pen', color: 'from-orange-500 to-orange-600' },
+        { label: 'Holidays', href: '/super-admin/holidays', icon: 'calendarX', color: 'from-red-500 to-red-600' },
+        { label: 'Reports', href: '/super-admin/reports', icon: 'barChart', color: 'from-emerald-500 to-green-600' },
       ]
     },
   ];
 
   // ─── Stats Config ───
   const statCards = [
-    { label: 'Total Institutions', value: stats.institutions, gradient: 'from-blue-500 to-cyan-500', bg: 'bg-blue-50', icon: 'building' as const },
-    { label: 'Total Students', value: stats.students, gradient: 'from-emerald-500 to-teal-500', bg: 'bg-emerald-50', icon: 'graduationCap' as const },
-    { label: 'Faculty Members', value: stats.faculty, gradient: 'from-purple-500 to-violet-500', bg: 'bg-purple-50', icon: 'users' as const },
-    { label: 'Active Classes', value: stats.classes, gradient: 'from-amber-500 to-orange-500', bg: 'bg-amber-50', icon: 'grid' as const },
-    { label: 'Active Subjects', value: stats.subjects, gradient: 'from-pink-500 to-rose-500', bg: 'bg-pink-50', icon: 'book' as const },
-    { label: 'System Users', value: stats.users, gradient: 'from-slate-600 to-slate-700', bg: 'bg-slate-50', icon: 'userCheck' as const },
+    { label: 'Total Institutions', value: stats.institutions, gradient: 'from-blue-500 to-cyan-500', bg: 'bg-blue-50', icon: 'building' },
+    { label: 'Total Students', value: stats.students, gradient: 'from-emerald-500 to-teal-500', bg: 'bg-emerald-50', icon: 'graduationCap' },
+    { label: 'Faculty Members', value: stats.faculty, gradient: 'from-purple-500 to-violet-500', bg: 'bg-purple-50', icon: 'users' },
+    { label: 'Active Classes', value: stats.classes, gradient: 'from-amber-500 to-orange-500', bg: 'bg-amber-50', icon: 'grid' },
+    { label: 'Active Subjects', value: stats.subjects, gradient: 'from-pink-500 to-rose-500', bg: 'bg-pink-50', icon: 'book' },
+    { label: 'System Users', value: stats.users, gradient: 'from-slate-600 to-slate-700', bg: 'bg-slate-50', icon: 'userCheck' },
   ];
 
   if (loading) {
@@ -296,7 +296,7 @@ export default function SuperAdminDashboard() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(navSections.flatMap(s => s.items) as any[]).map((item, i) => (
+            {navSections.flatMap(s => s.items).map((item, i) => (
               <button
                 key={i}
                 onClick={() => router.push(item.href)}
