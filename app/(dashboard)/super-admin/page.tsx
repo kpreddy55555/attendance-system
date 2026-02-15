@@ -296,7 +296,7 @@ export default function SuperAdminDashboard() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {navSections.flatMap(s => s.items).map((item, i) => (
+            {(navSections.flatMap(s => s.items) as any[]).map((item, i) => (
               <button
                 key={i}
                 onClick={() => router.push(item.href)}
