@@ -208,13 +208,15 @@ export default function LectureAttendancePage() {
     // Sort by roll number
     const sorted = filtered
       .map(e => e.students)
+      .flat()
+      .filter(Boolean)
       .sort((a: any, b: any) => {
         const rollA = parseInt(a.roll_number) || 0;
         const rollB = parseInt(b.roll_number) || 0;
         return rollA - rollB;
       });
 
-    setStudents(sorted);
+    setStudents(sorted as any);
   };
 
   const togglePeriod = (period: string) => {
